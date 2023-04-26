@@ -171,15 +171,19 @@ public class TPFinal {
             
             System.out.println("Escriba el DNI del paciente: ");
             int PacDni  = sc.nextInt(); //asigna la entrada de usuario a la DNI
+            sc.nextLine(); // Consume "\n"  // PRIMERA MODIFICACION
             
             System.out.println("Ingrese el nombre del paciente:  ");
-            String PacNom = sc.next(); //asigna la entrada de usuario a la variable nombre
+            //String PacNom = sc.next(); //asigna la entrada de usuario a la variable nombre
+            String PacNom = sc.nextLine();//toma hasta el salto de línea // SEGUNDA MODIFICACION nextLine()
             
             System.out.println("Ingrese el apellido del paciente:  ");
-            String PacApe = sc.next(); //asigna la entrada de usuario a la variable apellido
+            //String PacApe = sc.next(); //asigna la entrada de usuario a la variable apellido
+            String PacApe = sc.nextLine(); //toma hasta el salto de línea // 3RA MODIFICACION nextLine()
             
             System.out.println("Ingrese el domicilio del paciente:  ");
-            String PacDom = sc.next(); //asigna la entrada de usuario a la variable domicilio
+            //String PacDom = sc.next(); //asigna la entrada de usuario a la variable domicilio
+            String PacDom = sc.nextLine(); //toma hasta el salto de línea // 3RA MODIFICACION nextLine()
                     
             String sql = "insert into pacientes (PacDni,PacNom,PacApe,PacDom) values ('"+PacDni+"','"+PacNom+"','"+PacApe+"','"+PacDom+"')";
             Connection con=null;
